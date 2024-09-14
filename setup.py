@@ -3,15 +3,7 @@ from setuptools.command.install import install
 import nltk
 import subprocess
 import sys
-
-class PostInstallCommand(install):
-    def run(self):
-        # Run the standard install process
-        install.run(self)
-        
-        # Install NLTK data
-        nltk.download('punkt')
-        nltk.download('punkt_tab')
+    
 
 setuptools.setup(
     name='audio-speech-to-sign-language-converter',
@@ -32,7 +24,5 @@ setuptools.setup(
         'nltk',
     ],
     setup_requires=['nltk', 'joblib', 'click', 'regex', 'sqlparse', 'setuptools'],
-    cmdclass={
-        'install': PostInstallCommand,
-    },
+   
 )
