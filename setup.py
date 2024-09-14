@@ -17,7 +17,7 @@ setuptools.setup(
     name='audio-speech-to-sign-language-converter',
     version='0.1.0',
     description='Python project',
-    author='Nikita and team',
+    author='Nikita and Tech titans',
     author_email='k.nikita4487@gmail.com',
     packages=setuptools.find_packages(),
     install_requires=[
