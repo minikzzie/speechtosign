@@ -15,6 +15,9 @@ LABEL Name="Speech to Sign" \
 # Set working directory
 WORKDIR /app
 
+# copy dependencies
+COPY requirements.txt .
+
 # Create and activate a virtual environment
 RUN python -m venv /env
 ENV PATH="/env/bin:$PATH"
@@ -30,4 +33,4 @@ RUN pip install --upgrade pip && \
 EXPOSE 8000
 
 # Command to run the application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
